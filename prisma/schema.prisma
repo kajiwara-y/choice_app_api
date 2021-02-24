@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model OpoChoiceIndex {    
+  battle_id Int @id   
+  registeredAt DateTime?    
+  updatedAt DateTime?   
+  opo_choice_index_1 Int? 
+  opo_choice_index_2 Int? 
+  opo_choice_index_3 Int? 
+  opo_choice_index_4 Int? 
+  opo_choice_dmax_index Int?   
+} 
